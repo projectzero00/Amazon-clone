@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/orders.css">
+  </head>
+  <body>
+
+    <header class="amazon-header">
+      <div class="amazon-header-left-section">
+        <a href="amazon.html" class="header-link">
+          <img class="amazon-logo"
+            src="images/amazon-logo-white.png">
+          <img class="amazon-mobile-logo"
+            src="images/amazon-mobile-logo-white.png">
+        </a>
+      </div>
+
+      <div class="amazon-header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png">
+        </button>
+      </div>
+
+      <div class="amazon-header-right-section">
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png">
+          <div class="cart-quantity">3</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="page-title">Your Orders</h1>
+
+      <div class="orders-grid">
+        <section class="order-container">
+          
+          <header class="order-header">
+            <section class="order-header-left-section">
+              <div class="order-date">
+                <p class="order-header-label">Order Placed:</p>
+                <p>August 12</p>
+              </div>
+              <div class="order-total">
+                <p class="order-header-label">Total:</p>
+                <p>$35.06</p>
+              </div>
+            </section>
+
+            <section class="order-header-right-section">
+              <p class="order-header-label">Order ID:</p>
+              <p>27cba69d-4c3d-4098-b42d-ac7fa62b7664</p>
+            </section>
+          </header>
+
+          <section class="order-details-grid">
+            <div class="product-image-container">
+              <img src="images/products/athletic-cotton-socks-6-pairs.jpg">
+            </div>
+
+            <article class="product-details">
+              <p class="product-name">
+                Black and Gray Athletic Cotton Socks - 6 Pairs
+              </p>
+              <p class="product-delivery-date">
+                Arriving on: August 15
+              </p>
+              <p class="product-quantity">
+                Quantity: 1
+              </p>
+              <button class="buy-again-button button-primary">
+                <img class="buy-again-icon" src="images/icons/buy-again.png">
+                <span class="buy-again-message">Buy it again</span>
+              </button>
+            </article>
+
+            <nav class="product-actions">
+              <a href="tracking.html">
+                <button class="track-package-button button-secondary">
+                  Track package
+                </button>
+              </a>
+            </nav>
+
+            <div class="product-image-container">
+              <img src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
+            </div>
+
+            <article class="product-details">
+              <p class="product-name">
+                Adults Plain Cotton T-Shirt - 2 Pack
+              </p>
+              <p class="product-delivery-date">
+                Arriving on: August 19
+              </p>
+              <p class="product-quantity">
+                Quantity: 2
+              </p>
+              <button class="buy-again-button button-primary">
+                <img class="buy-again-icon" src="images/icons/buy-again.png">
+                <span class="buy-again-message">Buy it again</span>
+              </button>
+            </article>
+
+            <nav class="product-actions">
+              <a href="tracking.html">
+                <button class="track-package-button button-secondary">
+                  Track package
+                </button>
+              </a>
+            </nav>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

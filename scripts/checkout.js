@@ -1,7 +1,11 @@
 import { cart, removeFromCart } from '../data/cart.js';
 import { products } from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
+import { updateCartQuantity } from '../data/cart.js';
 
+window.onload = () => {
+    updateCartQuantity('.js-checkout');
+}
 let cartSummary = '';
 
 cart.forEach(cartItem => {
@@ -35,7 +39,7 @@ cart.forEach(cartItem => {
             <span>
               Quantity: <span class="quantity-label">${cartItem.quantity}</span>
             </span>
-            <span class="update-quantity-link link-primary">
+            <span class="update-quantity-link link-primary js-update-quantity">
               Update
             </span>
             <span class="delete-quantity-link link-primary js-delete-quantity" data-id="${matchingProduct.id}">
@@ -102,5 +106,7 @@ document.querySelectorAll('.js-delete-quantity').forEach(button => {
         removeFromCart(productId)
         let cartItemContainer = document.querySelector(`.js-cart-item-container-${productId}`)
         cartItemContainer.remove()
+        updateCartQuantity('.js-checkout')
     })
 })
+

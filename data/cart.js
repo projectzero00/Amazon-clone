@@ -43,3 +43,11 @@ export const removeFromCart = (productId) => {
     cart = newCart;
     saveCart();
 }
+
+export let updateCartQuantity = (selector) => {
+    let cartQuantity = 0;
+    cart.forEach(cartItem => {
+      cartQuantity += cartItem.quantity;
+      document.querySelector(selector).innerHTML = cartQuantity
+    })
+  }

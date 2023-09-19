@@ -48,6 +48,17 @@ export let updateCartQuantity = (selector) => {
     let cartQuantity = 0;
     cart.forEach(cartItem => {
       cartQuantity += cartItem.quantity;
-      document.querySelector(selector).innerHTML = cartQuantity
+      document.querySelector(selector).textContent = cartQuantity
+      
     })
   }
+
+  export let updateQuantity = (productId, newQuantity) => {
+    cart.forEach(cartItem => {
+      if (cartItem.productId === productId) {
+        cartItem.quantity = parseInt(newQuantity);
+      }
+    })
+    saveCart();
+  }
+
